@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
   * _strlen - Checks the length of a string
@@ -15,7 +15,7 @@ int _strlen(const char *s)
 		s++;
 	}
 
-	return length;
+	return (length);
 }
 /**
   * _strcpy - Copies content of length of src to dest
@@ -37,7 +37,7 @@ char *_strcpy(char *dest, char *src)
 
 	*dest = '\0';
 
-	return dest_start;
+	return (dest_start);
 }
 /**
   * _strcat - Appends content of src to dest
@@ -63,7 +63,7 @@ char *_strcat(char *dest, char *src)
 
 	*dest = '\0';
 
-	return dest_start;
+	return (dest_start);
 }
 /**
   * _strcmp - This compares two strings
@@ -97,7 +97,7 @@ char *_strdup(char *s)
 
 	if (copy == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	while (*s != '\0')
@@ -109,6 +109,6 @@ char *_strdup(char *s)
 
 	*copy = '\0';
 
-	return copy_start;
+	return (copy_start);
 }
 
