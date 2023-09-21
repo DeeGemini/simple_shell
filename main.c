@@ -15,18 +15,18 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	if (initializeShell() != 0)
+	if (initializeShell(void) != 0)
 	{
 		fprintf(stderr, "Shell initialization failed\n");
 		return (1);
 	}
 
-	if (runShell() != 0)
+	if (runShell(void) != 0)
 	{
 		fprintf(stderr, "Shell execution failed\n");
 		return (1);
 	}
 
-	cleanupShell();
+	cleanupShell(void);
 	return (0);
 }
