@@ -10,7 +10,7 @@
 char *find_path(char *command)
 {
 	char *path, *temp, *path_copy, *token;
-	int i, count = 0;
+	int count = 0;
 	struct stat st;
 
 	if (stat(command, &st) == 0)
@@ -43,4 +43,3 @@ char *find_path(char *command)
 	free(path_copy);
 	return (command);
 }
-
