@@ -1,32 +1,15 @@
 #include "main.h"
 
-
 /**
  * main - Entry point for the custom shell program.
- * @argc: Number of command-line arguments.
- * @argv: Array of command-line arguments.
+ * @ac: Number of arguments (unused).
+ * @av: Array of arguments (unused).
+ *
  * Return: 0 on successful execution.
  */
-int main(int argc, char **argv)
+int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 {
-	if (argc != 1)
-	{
-		fprintf(stderr, "Usage: %s\n", argv[0]);
-		return (1);
-	}
+	loop();
 
-	if (initializeShell(void) != 0)
-	{
-		fprintf(stderr, "Shell initialization failed\n");
-		return (1);
-	}
-
-	if (runShell(void) != 0)
-	{
-		fprintf(stderr, "Shell execution failed\n");
-		return (1);
-	}
-
-	cleanupShell(void);
 	return (0);
 }
